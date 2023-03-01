@@ -1,90 +1,570 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
-    <link rel="stylesheet" href="./dist/main.css">
-    <title>Foodyar</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.3/plyr.css" />
+  <link rel="stylesheet" href="./dist/main.css">
+  <title>Foodyar</title>
 </head>
+
 <body>
+  <div class="container">
+
+    <header>
+      <nav class="header__nav">
+        <a href="index.html"> <img src="./Graphics/logo/logo.png" alt="website logo"></a>
+        <button class="hamburger">
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+        <ul class="header__ul">
+          <a href="" class="active">
+            <li>Home </li>
+          </a>
+          <a href="">
+            <li>Beverages </li>
+          </a>
+          <a href="">
+            <li>Chef </li>
+          </a>
+          <a href="">
+            <li>Ingredient </li>
+          </a>
+          <a href="">
+            <li>Stories </li>
+          </a>
+
+          <a href="" class="nav__cta">
+            <li>My Kitchen </li>
+          </a>
+
+        </ul>
+      </nav>
+
+    </header>
+
+  </div>
+
+  <section id="hero">
     <div class="container">
+      <div class="hero">
+        <div class="hero__content">
+          <h1>Eat What You Cook
+            With Us, Together!</h1>
+          <p>When you eat something that cooked by
+            yourself, the happiness is priceless.</p>
+          <a href="#" class="hero__btn">Decide a Menu</a>
+        </div>
 
-        
-            <header>
-                <nav class="header__nav">
-                    <img src="./Graphics/logo/logo.png" alt="website logo">
 
-                    <ul class= "header__ul">
-                        <a href="" class="active"><li>Home </li></a>
-                        <a href="" ><li>Beverages </li></a>
-                        <a href="" ><li>Chef </li></a>
-                        <a href="" ><li>Ingredient </li></a>
-                        <a href="" ><li>Stories </li></a>
+        <div class="hero__media">
+          <video id="player1" playsinline controls data-poster="./Graphics/hero/poster.png">
+            <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+            <source src="/path/to/video.webm" type="video/webm" />
+          </video>
 
-                        <a href="" class="nav__cta hvr-float"><li>My Kitchen </li></a>
-                    
-                    </ul>
-                </nav>
-
-            </header>
-
+        </div>
+      </div>
     </div>
-
-<section id="hero">
+  </section>
+  <!-- ---------- HERO ENDS ---------- -->
+  <!-- ----------- SPECIAL ----------- -->
+  <section id="special">
     <div class="container">
-        <div class="hero">
-                <div class="hero__content">
-                        <h1>Eat What You Cook
-                            With Us, Together!</h1>
-                            <p>When you eat something that cooked by
-                                yourself, the happiness is priceless.</p>
-                                <a href="#" class="hero__btn hvr-float">Decide a Menu</a>
-                </div>
+      <div class="spe__title">
+        <p>Watch Now</p>
+        <h2>Special to Try</h2>
+      </div>
+      <div class="spe__content">
+        <div class="tabset">
+          <!-- Tab 1 -->
+          <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
+          <label for="tab1">Healthy Food</label>
+          <!-- Tab 2 -->
+          <input type="radio" name="tabset" id="tab2" aria-controls="rauchbier">
+          <label for="tab2">Lunch</label>
+          <!-- Tab 3 -->
+          <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
+          <label for="tab3">Vege Desert</label>
+          <!-- Tab 4 -->
+          <input type="radio" name="tabset" id="tab4" aria-controls="dunkles">
+          <label for="tab4">Shake</label>
 
-
-                <div class="hero__media">
-                    <video id="player" playsinline controls data-poster="./Graphics/hero/poster.png">
+          <div class="tab-panels">
+            <section id="marzen" class="tab-panel">
+              <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <video id="player2" playsinline controls
+                        data-poster="./Graphics/special-to-try/img1.png">
                         <source src="./Graphics/hero/video.mp4" type="video/mp4" />
                         <source src="/path/to/video.webm" type="video/webm" />
                       </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
 
+                    <li class="splide__slide">
+                      <video id="player3" class="food__slide" playsinline controls
+                        data-poster="./Graphics/special-to-try/img2.png">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+
+
+
+
+                    <li class="splide__slide">
+                      <video id="player4" class="food__slide" playsinline controls
+                        data-poster="./Graphics/special-to-try/img-3.png">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+
+
+                    <li class="splide__slide">
+                      <video id="player5" class="food__slide" playsinline controls
+                        data-poster="./Graphics/special-to-try/img-4.png">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+
+                    <li class="splide__slide">
+                      <video id="player6" class="food__slide" playsinline controls
+                        data-poster="./Graphics/special-to-try/img-4.png">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+                  </ul>
                 </div>
+              </div>
+            </section>
+
+
+            <section id="rauchbier" class="tab-panel">
+              <div class="splide" id="xada" role="group" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <video id="player7" playsinline controls data-poster="./Graphics/special-to-try/slid2-img-1.jpg">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+
+                    <li class="splide__slide">
+                      <video id="player8" class="food__slide" playsinline controls
+                        data-poster="./Graphics/special-to-try/img2.png">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+
+
+
+
+                    <li class="splide__slide">
+                      <video id="player9" class="food__slide" playsinline controls
+                        data-poster="./Graphics/special-to-try/img-3.png">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+
+
+                    <li class="splide__slide">
+                      <video id="player10" class="food__slide" playsinline controls
+                        data-poster="./Graphics/special-to-try/img-4.png">
+                        <source src="./Graphics/hero/video.mp4" type="video/mp4" />
+                        <source src="/path/to/video.webm" type="video/webm" />
+                      </video>
+                      <h2>Salad Kiwi Sugga</h2>
+                      <p>Amir Samantha</p>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star"></span>
+                      <span class="fa fa-star"></span>
+                    </li>
+
+
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+
+            <section id="dunkles" class="tab-panel">
+              <h2>you can add another slider if you want</h2>
+              <p> you get the idea copy the code from above and paste that in here and you are good to go. dont forget
+                to init the slider and plyr in script tags</p>
+            </section>
+
+          </div>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+  <!-- -------- SPECIAL ENDS --------- -->
+  <!-- -------- Testimonials --------- -->
+  <section id="testimonials">
+    <div class="container">
+
+      <div class="review">
+        <div class="splide" id="quote" role="group" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list quote">
+
+              <li class="splide__slide">
+                <h2>The food at this restaurant was fantastic, especially the seafood dishes.
+                  The service was attentive and the atmosphere was cozy and inviting.</h2>
+                <div class="review__detail">
+                  <img src="./Graphics/quote/review-profile.png" alt="">
+                  <p>tim</p>
+                  <p>Vege Master</p>
+                </div>
+
+              </li>
+
+
+              <li class="splide__slide">
+                <h2>The pizza here was a bit disappointing, as the crust was
+                  too thin and lacked flavor. However, the appetizers and drinks
+                  were great and the service was friendly and efficient.</h2>
+                <div class="review__detail">
+                  <img src="./Graphics/quote/review-profile.png" alt="">
+                  <p>jhon</p>
+                  <p>Vege Master</p>
+                </div>
+              </li>
+
+
+              <li class="splide__slide">
+                <h2>The brunch menu at this restaurant is amazing -
+                  the eggs benedict was perfectly cooked and the bottomless mimosas were a great addition. Highly
+                  recommend for a weekend brunch with friends.
+                </h2>
+                <div class="review__detail">
+                  <img src="./Graphics/quote/review-profile.png" alt="">
+                  <p>sara</p>
+                  <p>Vege Master</p>
+                </div>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="statics">
+        <p>180.000+
+          <span>MENU FOOD</span>
+        </p>
+        <p>20.000+
+          <span>CHEFS</span>
+        </p>
+        <p>400.000+
+          <span>COURSE</span>
+        </p>
+        <p>6.900.000
+          <span>ALUMNI</span>
+      </div>
+      </p>
 
 
 
 
-    <script src="./dist/script.js"></script>
-    <script src="https://cdn.plyr.io/3.7.3/plyr.js"></script>
-    <script>
-    const player = new Plyr('#player', {
-  controls: [
-    'play-large', 
-    'settings',
-    'duration'
-            ] ,
-ratio: '1:1' // set poster aspect ratio
-});
-
-const playerElement = document.querySelector('.plyr');
-playerElement.addEventListener('click', () => {
-  player.showControls();
-});
 
 
-  
-      </script>
-     
+
+    </div>
+  </section>
+  <!-- -------- Testimonials End--------- -->
+
+  <!-- ------------- App ------------- -->
+  <section id="app">
+    <div class="container">
+      <div class="app__content">
+        <div class="app__graphic">
+          <img src="./Graphics/app download/bg.png" alt="">
+        </div>
+
+        <div class="app__text">
+          <h2>Download our app and join the contest</h2>
+          <p>In order to improve our cooking skills,
+            we do need a food photography </p>
+          <a href="#"> <img src="./Graphics/app download/appstore-logo.png" alt=""></a>
+          <a href="#"> <img src="./Graphics/app download/googleplay-logo.png" alt=""></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- ------------- App Ends------------- -->
+
+  <!-- ----------- Footer ------------ -->
+  <section id="footer">
+    <div class="container">
+      <footer>
+        <div class="footer">
+          <div class="footer__logo">
+            <a href="index.html"> <img src="./Graphics/logo/logo.png" alt=""> </a>
+          </div>
+
+          <div class="sec link1">
+            <p>Special Course</p>
+            <p> <a href="">Wedding Foods</a></p>
+            <p> <a href="">Healthy and Muscle</a></p>
+            <p> <a href="">Office Food Daily</a></p>
+            <p> <a href="">Happy Kids</a></p>
+          </div>
+
+          <div class="sec link2">
+            <p>Company</p>
+            <p> <a href="">APIs Developer</a></p>
+            <p> <a href="">Career</a></p>
+            <p> <a href="">Terms & Conditions</a></p>
+            <p> <a href="">Privacy Policy</a></p>
+          </div>
+
+          <div class="sec link3">
+            <p>Be Our Friend</p>
+            <p><a href="">3, Season Park, Jakarta</a></p>
+            <p> <a href="">support@foodyar.co,id</a></p>
+            <p><a href="">021 - 1111 - 2222</a></p>
+
+          </div>
+        </div>
+
+        <div class="pre__footer">
+          <p>All Rights Reserved Foodyar by Pixel from BuildWith Angga 2020</p>
+        </div>
+      </footer>
+    </div>
+  </section>
+
+
+
+
+  <!-- --------- Footer Ends --------- -->
+
+
+
+
+
+
+
+
+  <script src="./dist/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <script>
+    var splide = new Splide('.splide', {
+
+      perPage: 4,
+      perMove: 1,
+      gap: 20,
+      arrows: false,
+      breakpoints: {
+        860: {
+          perPage: 2,
+        },
+        550: {
+          perPage: 1,
+        },
+      }
+
+    });
+
+    splide.mount();
+
+    var splide = new Splide('#xada', {
+
+      perPage: 4,
+      perMove: 1,
+      gap: 20,
+      arrows: false,
+      breakpoints: {
+        860: {
+          perPage: 2,
+        },
+        550: {
+          perPage: 1,
+        },
+      }
+
+    });
+
+    splide.mount();
+
+    var splide = new Splide('#quote', {
+
+      perPage: 1,
+      arrows: false,
+    });
+    splide.mount();
+  </script>
+  <script src="https://cdn.plyr.io/3.7.3/plyr.js"></script>
+  <script>
+    const player1 = new Plyr('#player1', {
+      controls: [
+        'play-large',
+        'settings',
+        'duration'
+      ],
+      ratio: '1:1' // set poster aspect ratio
+    });
+
+
+    // const player2 = new Plyr('#player2', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+
+    // const player3 = new Plyr('#player3', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // const player4 = new Plyr('#player4', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // const player5 = new Plyr('#player5', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // const player6 = new Plyr('#player6', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // const player7 = new Plyr('#player7', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // const player8 = new Plyr('#player8', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // const player9 = new Plyr('#player9', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // const player10 = new Plyr('#player10', {
+    //   controls: [
+    //     'play-large',
+    //   ],
+    //   ratio: '1:1' // set poster aspect ratio
+    // });
+
+    // short code for splide js for not giving single id for each video slide (plyjs)
+    for (let i = 0; i <= 10; i++) {
+      const player = new Plyr(`#player${i}`, {
+        controls: [
+          'play-large',
+        ],
+        ratio: '1:1' // set poster aspect ratio
+      });
+    }
+
+  </script>
+
 
 </body>
+
 </html>
